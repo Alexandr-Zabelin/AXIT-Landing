@@ -78,13 +78,13 @@ header h3 {
     color: #ff8b0c;
 }
 
-.header-rightsection button {
+.orange-button {
     background-color: #ff8b0c;
     color: white;
     border: none;
 }
 
-.header-rightsection button:hover {
+.orange-button:hover {
     background-color: #da7002;
 }
 
@@ -98,9 +98,28 @@ header h3 {
 	height: 5vw;
 }
 
+.tabs-section {
+    background-color: #fafafa;
+    padding: 3% 7%;
+}
 
+.tabs-section-content {
+    display: flex;
+}
 
+.tabs button {
+		background-color: black;
+		color: white;
+		text-transform: uppercase;
+		font-weight: 700;
+		display: block;
+}
 
+.tabs button:first-child {
+		background-color: #ff8b0c;
+}	
+	
+	
 @media (max-width: 800px) {
     p {
 		font-size: 12px;
@@ -267,9 +286,13 @@ header h3 {
 	
 	
 	.media-text h3 {
-		font-size: 14px;
+		font-size: 17px;
 		text-align: center;
 		margin-bottom: 1vh;
+	}
+	
+	.media-text p {
+		text-align: center;
 	}
 	
 	.media-links {
@@ -284,8 +307,79 @@ header h3 {
 		margin: 1vh;
 	}
 	
+	.tabs-section-content {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.tabs {
+		width: 80%;
+		order: 2;
+	}
+	
+	.tabs form{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.tabs button {
+		height: 8vh;
+		width: 8vh;
+		max-height: 17vw;
+		max-width: 17vw;
+		margin: 1vh 2vw 2vh 2vw;
+		font-size: 11px;
+	}
+	
+	.tabs-section-text {
+		order: 3;
+		justify-content: center;
+	}
+	
+	.tabs-section-text h3, .tabs-section-text p {
+		text-align: center;
+	}
+	
+	.tabs-section-text h3 {
+		margin-bottom: 2vh;
+		font-size: 17px;
+	}
+	
+	.tabs-section-text p {
+		margin-bottom: 1vh;
+	}
+	
+	.tabs-section-text form {
+		text-align: center;
+	}
+	
+	.tabs-section-text button {
+		margin: 3vh auto;
+		border-radius: 4px;
+        width: 120px;
+        max-width: 270px;
+        height: 30px;
+        max-height: 12vh;
+        font-size: 15px;
+	}
+	
+	.tabs-section-image {
+		width: 50%;
+		order: 1;
+	}
+	
+	.tabs-section-image img {
+		width: 100%;
+		height: auto;
+	}
+	
 
 }
+
+
 
 @media (min-width: 800px) {
 	.media-text {
@@ -302,7 +396,65 @@ header h3 {
 		align-items: center;
 		justify-content: space-evenly;
 	}
+
+	.tabs-section {
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
+	}
+
+    .tabs-section-content {
+        align-items: center;
+        justify-content: space-between;
+    }
+	
+	.tabs button {
+		max-width: 13vw;
+		max-height: 13vw;
+		width: 17vh;
+		height: 17vh;
+		margin: 1px;
+	}
+	
+	.tabs button:hover {
+		border: 3px solid #ff8b0c;
+		transition-duration: 0.3s;
+	}
+	
+	.tabs button:first-child:hover {
+		background-color: #da7002;
+		border: none;
+	}
+
+	.tabs-section-text {
+		max-width: 45%;
+		max-height: 43vw;
+	}
+	
+	.tabs-section-text h3 {
+		margin-bottom: 6vh;
+		font-weight: 700;
+	}
+	
+	.tabs-section-text p {
+		margin-top: 3vh;
+	}
+	
+	.tabs-section-text button {
+		margin-top : 8vh;
+	}
+		
+	
+	.tabs-section-image {
+		max-width: 30%;
+	}
+	
+    .tabs-section-image img {
+        width: 100%;
+        height: auto;
+    }
 }
+
 
 
 @media (min-width: 800px) and (max-width: 1100px) {
@@ -458,8 +610,17 @@ header h3 {
         font-size: 16px;
     }
 	
-	.media h3 {
+	.media h3, .tabs-section-text h3 {
 		font-size: 16px;
+	}
+	
+	.tabs-section-text button {
+		border-radius: 4px;
+        width: 100px;
+        max-width: 28%;
+        height: 30px;
+        max-height: 12vh;
+        font-size: 15px;
 	}
 }
 
@@ -528,11 +689,11 @@ header h3 {
     }
 
     header h2 {
-        font-size: 70px;
+        font-size: 65px;
     }
 
     header h3 {
-        font-size: 40px;
+        font-size: 37px;
     }
 
     .header-leftsection button {
@@ -606,7 +767,16 @@ header h3 {
         font-size: 18px;
     }
 	
-	.media h3 {
+	.media h3, .tabs-section-text h3 {
 		font-size: 20px;
+	}
+	
+	.tabs-section-text button {
+		border-radius: 4px;
+        width: 150px;
+        max-width: 28%;
+        height: 50px;
+        max-height: 12vh;
+        font-size: 18px;
 	}
 }
