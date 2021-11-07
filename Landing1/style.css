@@ -119,8 +119,8 @@ header h3 {
 		background-color: #ff8b0c;
 }	
 
-.sub-list-section {
-	padding: 3vh 7%;
+.sublist-section {
+	padding: 3% 7%;
 }
 
 .orange-line {
@@ -390,25 +390,51 @@ header h3 {
 		height: auto;
 	}
 	
-	.sub-list-section-content {
-		display: flex;
-		flex-flow: row wrap;
+	.sublist-section img {
+		height: 3vh;
+		width: 3vh;
 	}
 	
-	.sub-list-section-content-text {
+	.sublist-section-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.sublist-section-content-image {
+		order: 2;
+	}
+	
+	.sublist-section-content-text {
 		order: 1;
 	}
 	
-	.sub-list-section-content-image {
-		order: 2;
-		width: 30vw;
-		height: 40vh;
-		background-color: gray;
+	.sublist-section-content-text h3, h5, p {
+		text-align: center;
 	}
 	
-	.sub-list-section-content-subtext-container {
-		order: 3;
-		width: 30vw;
+	.sublist-section-content-subtext {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.sublist-section-content-subtext-text {
+		order: 1;
+		margin-top: 4vh;
+	}
+	
+	.sublist-section-content-subtext-text p {
+		margin: 1vh auto;
+	}
+	
+	.sublist-section-content-subtext img {
+		order: 2;
+	}
+	
+	.picture-section, .sublist-section {
+		min-height: 70vh;
 	}
 	
 	.picture-section-content {
@@ -417,7 +443,7 @@ header h3 {
 		align-items: center;
 	}
 	
-	.picture-section-content-image {
+	.picture-section-content-image, .sublist-section-content-image {
 		width: 80%;
 		height: 25vh;
 		background-color: gray;
@@ -430,7 +456,7 @@ header h3 {
 		text-align: center;
 	}
 	
-	.picture-section-content-text hr {
+	.picture-section-content-text hr, .sublist-section-content-text hr {
 		margin: 3vh auto;
 		width: 30%;
 	}
@@ -443,7 +469,7 @@ header h3 {
 
 
 
-@media (min-width: 800px) {
+@media (min-width: 801px) {
 	
 	.media-text {
 		width: 35%;
@@ -517,37 +543,43 @@ header h3 {
         height: auto;
     }
 	
-	.sub-list-section {
-		height: 80vh;
+	.sublist-section {
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
 	}
 	
-	.sub-list-section-content-image {
-		float: left;
+	.sublist-section-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		width: 100%;
+	}
+	
+	.sublist-section-content-image {
 		width: 35vw;
 		height: 50vh;
 		background-color: gray;
-		margin-right: 10vw;
+		box-shadow: 0 1px 20px -6px black;
 	}
 	
-	.sub-list-section-content-text hr {
-		margin: 4vh 0;
-		width: 10%;
+	.sublist-section-content-text {
+		max-width: 50%;
+		margin-left: 5vw;
 	}
 	
-	.sub-list-section-content-subtext-container {
-		max-width: 80vw;
-	}
-	
-	.sub-list-section-content-subtext {
+	.sublist-section-content-subtext {
 		display: flex;
-		align-items: flex-start;
-		margin: 4vh 0;
 	}
 	
-	.sub-list-section-content-subtext img {
-		width: 2.5vw;
-		height: auto;
-		margin-right: 0.5vw;
+	.sublist-section-content-subtext img {
+		width: 3vw;
+		height: 3vw;
+	}
+	
+	.sublist-section-content-subtext-text {
+		margin-left: 1vw;
 	}
 	
 	.picture-section {
@@ -581,7 +613,7 @@ header h3 {
 
 
 
-@media (min-width: 800px) and (max-width: 1100px) {
+@media (min-width: 801px) and (max-width: 1100px) {
     p {
         font-size: 14px;
         line-height: 17px;
@@ -747,7 +779,19 @@ header h3 {
         font-size: 15px;
 	}
 	
-	.picture-section h3 {
+	.sublist-section {
+		min-height: 60vh;
+	}
+	
+	.sublist-section-content-subtext h5 {
+		font-size: 14px;
+	}
+	
+	.sublist-section-content-subtext {
+		margin: 2vh 0;
+	}
+	
+	.picture-section h3, .sublist-section-content-text h3 {
 		font-size: 16px;
 	}
 	
@@ -755,15 +799,15 @@ header h3 {
 		min-height: 60vh;
 	}
 	
-	.picture-section-content-text hr {
-		margin: 4vh 0;
+	.picture-section-content-text hr, .sublist-section-content-text hr {
+		margin: 3vh 0;
 	}
 	
 	.picture-section-content-text p {
 		margin: 3vh 0;
 	}
 	
-	.picture-section-content-image {
+	.picture-section-content-image, .sublist-section-content-image {
 		width: 35vw;
 		height: 35vh;
 	}
@@ -771,7 +815,7 @@ header h3 {
 
 
 
-@media (min-width: 1100px) {
+@media (min-width: 1101px) {
 	p {
         font-size: 18px;
         line-height: 23px;
@@ -925,6 +969,20 @@ header h3 {
         font-size: 18px;
 	}
 	
+	.sublist-section-content h3 {
+		font-size: 25px;
+		font-weight: 700;
+	}
+	
+	.sublist-section-content-subtext {
+		margin: 5vh 0;
+	}
+	
+	.sublist-section-content-subtext h5 {
+		font-size: 18px;
+		margin-bottom: 6px;
+	}
+	
 	.picture-section {
 		min-height: 80vh;
 	}
@@ -933,7 +991,7 @@ header h3 {
 		font-size: 25px;
 	}
 	
-	.picture-section-content-text hr {
+	.picture-section-content-text hr, .sublist-section-content-text hr {
 		margin: 6vh 0;
 	}
 	
