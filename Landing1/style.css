@@ -63,13 +63,13 @@ header h3 {
     font-weight: 300;
 }
 
-.header-leftsection button {
+.header-leftsection button, .stylish-button {
     background-color: #9B9595FF;
     color: white;
     font-weight: 400;
 }
 
-.header-leftsection button:hover {
+.header-leftsection button:hover, .stylish-button:hover {
     background-color: #918B8BFF;
     border-color: #dddcd7;
 }
@@ -82,6 +82,7 @@ header h3 {
     background-color: #ff8b0c;
     color: white;
     border: none;
+	font-weight: 400;
 }
 
 .orange-button:hover {
@@ -166,7 +167,7 @@ header h3 {
 	text-align: center;
 }
 
-.awesome-section h2, .pricing h2, .customers-text h2 {
+.awesome-section h2, .pricing h2, .customers-text h2, .stylish-text h2, .contact-text h2  {
 	text-transform: uppercase;
 	font-weight: 300;
 }
@@ -311,10 +312,96 @@ header h3 {
 }
 
 .ava {
-		background-color: gray;
-		border-radius: 50%;
-		margin-right: 1vw;
-	}
+	background-color: gray;
+	border-radius: 50%;
+	margin-right: 1vw;
+}
+
+.stylish {
+	padding: 3% 7%;
+	background-color: #9B9595FF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.stylish-text {
+	text-align: center;
+}
+
+.stylish-text h2{
+	color: white;
+	font-weight: 300;
+}
+
+.stylish-text p {
+	color: #dcdbd6;
+}
+
+.white-line {
+	background-color: white;
+	border-color: white;
+}
+
+.stylish-form form {
+	display: flex;
+	justify-content: center;
+}
+
+#stylish-button-id {
+	margin-top: 0;
+}
+
+.contact-section {
+	padding: 3% 7%;
+}
+
+.contact-forms {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-text {
+	text-align: center;
+}
+
+.contact-section input, .contact-section textarea {
+	border-bottom: 2px solid #e1dfdf;
+	width: 100%;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	padding-left: 1em;
+	padding-bottom: 0.3em;
+	font-size: 1em;
+}
+
+.contact-text-forms-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.contact-section textarea {
+	height: 100%;
+	resize: none;
+}
+
+.contact-section input:focus, .contact-section textarea:focus {
+	outline: none;
+}
+
+.contact-section input:focus::placeholder, .contact-section textarea:focus::placeholder {
+	opacity: 0;
+	transition-duration: 0.5s;
+}
+
+.contact-button-form {
+	display: flex;
+	justify-content: center;
+}
+
+
 	
 @media (max-width: 800px) {
     p {
@@ -406,7 +493,7 @@ header h3 {
         text-align: center;
     }
 
-    .header-leftsection button {
+    .header-leftsection button, .stylish-button {
         border: 2px solid white;
         border-radius: 4px;
         width: 150px;
@@ -416,6 +503,15 @@ header h3 {
         font-size: 15px;
 		margin-top: 3vh;
     }
+	
+	.contact-button-form button {
+        border-radius: 4px;
+        width: 150px;
+        max-width: 300px;
+        height: 30px;
+        max-height: 12vh;
+        font-size: 15px;
+	}
 
     .header-rightsection {
         max-height: 65%;
@@ -652,7 +748,7 @@ header h3 {
 		min-height: 70vh;
 	}
 	
-	.awesome-toptext h2, .pricing h2, .customers-text h2  {
+	.awesome-toptext h2, .pricing h2, .customers-text h2, .stylish-text h2, .contact-text h2  {
 		font-size: 21px;
 	}
 	
@@ -738,6 +834,40 @@ header h3 {
 	
 	.job {
 		font-size: 11px;
+	}
+	
+	.stylish-form {
+		margin-top: 3vh;
+	}
+	
+	.contact-forms {
+		margin: 40px 0;
+	}
+	
+	.contact-section input {
+		margin: 8px 0;
+	}
+	
+	.contact-section input:last-child {
+		margin-bottom: 30px;
+	}
+	
+	.contact-text-forms {
+		font-size: 12px;
+	}
+	
+	.contact-section textarea {
+		height: 50px;
+	}
+	
+	.contact-section textarea, .contact-section input{
+		border: 3px solid #e1dfdf;
+		border-radius: 2px;
+		padding-top: 0.3em;
+	}
+	
+	.contact-button-form button {
+		margin-top: 3vh;
 	}
 	
 }
@@ -910,6 +1040,21 @@ header h3 {
 		padding: 1vw;
 	}
 	
+	.contact-forms {
+		margin-top: 5vh;
+	}
+	
+	.contact-text-forms {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.contact-text-forms-left, .contact-text-forms-right {
+		width: 47%;
+		height: 22vh;
+	}
+	
 }
 	
 
@@ -1001,7 +1146,7 @@ header h3 {
     }
 
 
-    .header-leftsection button {
+    .header-leftsection button, .stylish-button {
         border: 2px solid white;
         border-radius: 4px;
         width: 120px;
@@ -1010,6 +1155,15 @@ header h3 {
         max-height: 12vh;
         font-size: 15px;
     }
+	
+	.contact-button-form button {
+        border-radius: 4px;
+        width: 120px;
+        max-width: 30%;
+        height: 30px;
+        max-height: 12vh;
+        font-size: 15px;
+	}
 
     .header-rightsection {
         height: 90%;
@@ -1127,7 +1281,7 @@ header h3 {
 		margin: 2vh 0;
 	}
 	
-	.awesome-toptext h2, .pricing h2, .customers-text h2  {
+	.awesome-toptext h2, .pricing h2, .customers-text h2, .stylish-text h2, .contact-text h2  {
 		font-size: 27px;
 	}
 	
@@ -1157,6 +1311,19 @@ header h3 {
 	.job {
 		font-size: 14px;
 	}
+	
+	.stylish-form {
+		margin-top: 3vh;
+	}
+	
+	.contact-button-form button {
+		margin-top: 3vh;
+	}
+	
+	.contact-text-forms {
+		font-size: 14px;
+	}
+	
 }
 
 
@@ -1235,7 +1402,7 @@ header h3 {
         font-size: 37px;
     }
 
-    .header-leftsection button {
+    .header-leftsection button, .stylish-button {
         border: 2px solid white;
         border-radius: 4px;
         width: 180px;
@@ -1244,6 +1411,15 @@ header h3 {
         max-height: 12vh;
         font-size: 18px;
     }
+	
+	.contact-button-form button {
+		border-radius: 4px;
+        width: 180px;
+        max-width: 30%;
+        height: 50px;
+        max-height: 12vh;
+        font-size: 18px;
+	}
 
     .header-rightsection {
         height: 90%;
@@ -1354,7 +1530,7 @@ header h3 {
 		font-size: 25px;
 	}
 	
-	.awesome-toptext h2, .pricing h2, .customers-text h2  {
+	.awesome-toptext h2, .pricing h2, .customers-text h2, .stylish-text h2, .contact-text h2   {
 		font-size: 35px;
 	}
 	
@@ -1386,6 +1562,18 @@ header h3 {
 	
 	.job {
 		font-size: 20px;
+	}
+	
+	.stylish-form {
+		margin-top: 5vh;
+	}
+	
+	.contact-text-forms {
+		font-size: 18px;
+	}
+	
+	.contact-button-form button {
+		margin-top: 5vh;
 	}
 	
 }
