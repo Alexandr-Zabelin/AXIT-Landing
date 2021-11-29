@@ -401,6 +401,24 @@ header h3 {
 	justify-content: center;
 }
 
+.footer-section {
+	background-color: black;
+}
+
+.footer-content {
+	height: 100%;
+}
+
+.footer-icons {
+	display: flex;
+	justify-content: center;
+}
+
+.footer-text {
+	color: gray;
+	text-align: center;
+}
+
 
 	
 @media (max-width: 800px) {
@@ -870,6 +888,18 @@ header h3 {
 		margin-top: 3vh;
 	}
 	
+	.footer-section {
+		padding: 6px 0;
+	}
+	
+	.footer-section img {
+		height: 30px;
+		width: 30px;
+	}
+	
+	.footer-text {
+		font-size: 10px;
+	}
 }
 
 
@@ -1053,6 +1083,20 @@ header h3 {
 	.contact-text-forms-left, .contact-text-forms-right {
 		width: 47%;
 		height: 22vh;
+	}
+	
+	.footer-section {
+		padding: 1vh 0;
+	}
+	
+	.footer-content a {
+		width: 3vw;
+		height: 3vw;
+	}
+	
+	.footer-content img {
+		width: 3vw;
+		height: 3vw;
 	}
 	
 }
@@ -1324,6 +1368,9 @@ header h3 {
 		font-size: 14px;
 	}
 	
+	.footer-text {
+		font-size: 12px;
+	}
 }
 
 
@@ -1576,4 +1623,7 @@ header h3 {
 		margin-top: 5vh;
 	}
 	
+	.footer-text {
+		font-size: 16px;
+	}
 }
